@@ -36,15 +36,14 @@ def process_frame(frame):
     if results[0].keypoints is None or len(results[0].keypoints.xy) == 0:
         print("人物が検出されませんでした")
         return annotated_frame
-
     # 姿勢分析結果のキーポイントを取得する
     keypoints = results[0].keypoints.xy[0]  # 座標
     confs = results[0].keypoints.conf[0]  # 信頼度
 
-
+    
     for idx, (point, score) in enumerate(zip(keypoints, confs)):
         x, y = int(point[0]), int(point[1])
-        # score = confs[0][idx]
+        # score = confs[idx][0]
 
         # スコアが0.5以下なら描画しない
         if score < 0.5:

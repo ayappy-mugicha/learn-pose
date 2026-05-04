@@ -33,7 +33,9 @@ def process_frame(frame):
     results = model(frame)
 
     annotated_frame = results[0].plot()
-
+    if results[0].keypoints is None or len(results[0].keypoints.xy) == 0:
+        print("人物が検出されませんでした")
+        return annotated_frame
     # 姿勢分析結果のキーポイントを取得する
     # keypoints = results[0].keypoints.xy  # 座標
     # confs = results[0].keypoints.conf  # 信頼度
@@ -41,12 +43,14 @@ def process_frame(frame):
     # for keypoint in keypoints:
     # for idx, point in enumerate(keypoint):
     # x, y = int(point[0]), int(point[1])
-
+    
+    # 姿勢分析結果のキーポイントを取得する
     keypoints = results[0].keypoints.xy[0]  # 1人目のキーポイント
     confs = results[0].keypoints.conf[0]   # 1人目の信頼度
-
+    
     for idx, (point, score) in enumerate(zip(keypoints, confs)):
         x, y = int(point[0]), int(point[1])
+        # score = confs[idx]
         if score < 0.5:
             continue
 
@@ -86,7 +90,14 @@ def process_frame(frame):
 
         if left_wrist[1] < left_elbow[1] and left_elbow[1] < left_shoulder[1]:
             left_raised = True
+        # 右手を挙げる検出
+        right_shoulder = keypoints[6]
+        right_elbow = keypoints[8]
+        right_wrist = keypoints[10]
 
+        if right_wrist[1] < right_elbow[1] < right_shoulder[1]:
+            right_raised = True
+            
         if left_raised:
             cv2.putText(
                 annotated_frame,
@@ -98,16 +109,7 @@ def process_frame(frame):
                 thickness=3,
                 lineType=cv2.LINE_AA,
             )
-
-        # 右手を挙げる検出
-        right_shoulder = keypoints[6]
-        right_elbow = keypoints[8]
-        right_wrist = keypoints[10]
-
-        if right_wrist[1] < right_elbow[1] < right_shoulder[1]:
-             right_raised = True
-
-        if left_raised:
+        elif right_raised:
             cv2.putText(
                 annotated_frame,
                 "Right Hand Raised",
