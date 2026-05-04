@@ -13,7 +13,7 @@
 ![ターミナル左クリック](./images/image-1.png)
 「ターミナルで開く」をクリック
 ![ターミナルの画面](./images/image-2.png)
-ユーザーネームのあとに`\learn-pose`と表示されていたら準備完了です
+ユーザーネームのあとに`\learn-pose-main`と表示されていたら準備完了です
 
 ## 1. 仮想環境（専用の作業部屋）を作る
 [仮想環境とは](https://qiita.com/yasu_qita/items/197c94b2ad3003233407)
@@ -29,9 +29,22 @@ python -m venv venv
 
 仮想環境に入るためのコマンドは以下のとおりです。
 
-```bash
-venv\Script\activate
+```cmd
+# コマンドプロンプトの場合
+venv\Scripts\activate
 ```
+
+``` powershell
+# powershell の場合
+venv\Scripts\activate.ps1
+```
+
+```bash
+# linux or mac
+source venv/bin/activate
+```
+仮想環境に入るとこのような表示になると思います。
+![ターミナルの画面](./images/image-2.png)
 
 ## 3.必要なライブラリをインストールする
 
