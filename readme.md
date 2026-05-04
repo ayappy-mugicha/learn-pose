@@ -43,8 +43,11 @@ venv\Scripts\activate.ps1
 # linux or mac
 source venv/bin/activate
 ```
+
 仮想環境に入るとこのような表示になると思います。
-![ターミナルの画面](./images/image-2.png)
+![ターミナルの画面仮想環境に入れている状態](./images/image-3.png)
+
+ターミナルの一番左に(venv)と書かれていば仮想環境に入れている状態です。
 
 ## 3.必要なライブラリをインストールする
 
