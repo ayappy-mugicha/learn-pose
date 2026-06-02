@@ -66,6 +66,7 @@ pip install -r required.txt
 python app.py
 ```
 ```bash
+# linux
 python app.py
 ```
 ``` bash
