@@ -22,7 +22,7 @@
 ターミナルを開いて、以下のコマンドを実行。
 
 ```bash
-python -m venv venv
+python3 -m venv venv
 ```
 
 ## 2.仮想環境に入りましょう。
@@ -47,6 +47,7 @@ source venv/bin/activate
 仮想環境に入るとこのような表示になると思います。
 ![ターミナルの画面仮想環境に入れている状態](./images/image-3.png)
 
+
 ターミナルの一番左に(venv)と書かれていば仮想環境に入れている状態です。
 
 ## 3.必要なライブラリをインストールする
@@ -58,3 +59,16 @@ pip install -r required.txt
 ```
 
 これで最低限の準備は完了しました。
+
+## 4.実行!!
+```cmd
+# コマンドプロンプト
+python app.py
+```
+```bash
+python app.py
+```
+``` bash
+# macの場合
+python3 app.py
+```
