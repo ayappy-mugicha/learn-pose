@@ -7,7 +7,7 @@
 
 [Pythonのダウンロード方法 for windows](https://www.python.jp/install/windows/install.html)
 
-[Pythonのダウンロード方法 for mac](https://blog.pyq.jp/entry/python_install_241030_mac)
+[Pythonのダウンロード方法 for mac](https://qiita.com/omo_taku/items/bc97f69391b2f4627f36)
 
 ## 前準備
 ### 環境にDLする。
