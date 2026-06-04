@@ -6,11 +6,13 @@
 * pythonがインストールされていること
 
 [Pythonのダウンロード方法 for windows](https://www.python.jp/install/windows/install.html)
+
 [Pythonのダウンロード方法 for mac](https://blog.pyq.jp/entry/python_install_241030_mac)
 
 ## 前準備
 ### 環境にDLする。
 1.右上の、`code`を押します。
+
 2.`DownloadZIP`を押して、任意のフォルダーに保存します。(本当は、ディレクトリ直下が好ましい)
 <img width="1202" height="627" alt="image" src="https://github.com/user-attachments/assets/2868763d-6c33-4f54-b82f-00b19f616548" />
 
@@ -18,11 +20,13 @@
 3.エクスプローラから、ダウンロードしたファイルにアクセスします。
 
 4.フォルダーを開いたら、左クリックを押します。
-![ターミナル左クリック](./images/image-1.png)
 
 5.左クリックを押すと、項目が出てきてその中の「ターミナルで開く」をクリック
-![ターミナルの画面](./images/image-2.png)
+![ターミナル左クリック](./images/image-1.png)
+
 6.ユーザーネームのあとに`\learn-pose-main`と表示されていたら準備完了です
+![ターミナルの画面](./images/image-2.png)
+
 
 ## 1. 仮想環境（専用の作業部屋）を作る
 [仮想環境とは](https://qiita.com/yasu_qita/items/197c94b2ad3003233407)
